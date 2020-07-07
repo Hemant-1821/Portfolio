@@ -14,7 +14,30 @@ header,
   }
 }
 
+.blur-bg {
+  background-image: url(/images/j.jpeg); 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center center;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
 .nav-item-pad{
     padding-right: 15%;
+    z-index: 2;
+}
+
+.head-style{
+    padding-top: 10%;
+    padding-left: 35%;
+    color: antiquewhite;
+    z-index: 2;
+    position: absolute;
+
 }
 
