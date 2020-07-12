@@ -5,22 +5,13 @@ header,
   height: 100%;
 }
 
-@media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 100vh;
-  }
-}
-
 .blur-bg {
-  background-image: url(/images/j.jpeg); 
+  background-image: linear-gradient( rgba(27, 72, 107,0.80),rgba(48, 179, 91, 0.64)), url(/images/s.jpg);
   background-repeat: no-repeat; 
   background-size: cover;
   background-position: center center;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
   position: fixed;
   left: 0;
   right: 0;
@@ -32,12 +23,152 @@ header,
     z-index: 2;
 }
 
+.nav-link-color{
+  color: whitesmoke;
+}
+
+.a {
+  margin-bottom: 10px;
+}
+
+.nav-link-color {
+  display: inline-block;
+  color: rgb(243, 239, 239);
+
+  text-decoration: none;
+}
+
+.nav-link-color::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(235, 231, 231);
+  transition: all .2s;
+}
+
+.nav-link-color:hover::after {
+  width: 100%;
+  /* transition: all .3s; */
+}
+
+.link-color{
+  color: rgb(0, 119, 181);
+}
+
+.git-color{
+  color: black;
+}
+
+.stack-color{
+  color: orange;
+}
+
 .head-style{
     padding-top: 10%;
-    padding-left: 35%;
+    padding-left: 15%;
+    z-index: 2;
+    position: absolute;
+}
+
+.head-para{
+    font-family: "Charm";
+    font-size: 270%;
+    font-weight: lighter;
     color: antiquewhite;
+}
+
+.cont-style{
+    margin-top: 5px;
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 21%;
+    z-index: 2;
+    position: absolute;
+}
+
+.cont-para{
+  font-family: "Cherry Swash";
+  font-size: 130%;
+  font-weight: lighter;
+  color: antiquewhite;
+}
+
+
+.btn-pad{
+  margin-left: 20px;
+}
+
+.scroll-text{
+  margin-top: 35%;
+  margin-left: 41%;
+  color: antiquewhite;
+}
+
+.scroll-text-arrow{
+  margin-top: 1%;
+  margin-left: 47%;
+  color: antiquewhite;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+
+  .head-style{
+    padding-top: 40%;
+    padding-left: 5%;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .head-para{
+    font-family: "Charm";
+    font-size: 200%;
+    font-weight: lighter;
+    color: antiquewhite;
+  }
+
+  .cont-style{
+    margin-top: 30px;
+    padding-top: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
     z-index: 2;
     position: absolute;
 
-}
+  }
 
+  .cont-para{
+    font-family: "Cherry Swash";
+    font-size: 100%;
+    font-weight: lighter;
+    color: antiquewhite;
+  }
+
+  .btn-pad{
+    margin-left: 20px;
+    font-size: 70%;
+  }
+
+  .btn-pad-2{
+    font-size: 70%;
+  }
+
+  .scroll-text{
+    padding-top: 90%;
+    margin-top: 35%;
+    margin-left: 26%;
+    color: antiquewhite;
+  }
+  
+  .scroll-text-arrow{
+    margin-top: 1%;
+    margin-left: 47%;
+    color: antiquewhite;
+  }
+}
