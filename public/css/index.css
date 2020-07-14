@@ -5,14 +5,27 @@ header,
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.main-header{
+  position: relative;
+}
+
+.navbar {
+  position:fixed;
+  /*   */
+}
+
 .blur-bg {
   background-image: linear-gradient( rgba(27, 72, 107,0.80),rgba(48, 179, 91, 0.64)), url(/images/s.jpg);
   background-repeat: no-repeat; 
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
   filter: blur(1px);
   -webkit-filter: blur(1px);
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: -1;
@@ -20,7 +33,8 @@ header,
 
 .nav-item-pad{
     padding-right: 15%;
-    z-index: 2;
+    /* z-index: 2; */
+    /* position: absolute; */
 }
 
 .nav-link-color{
@@ -34,7 +48,6 @@ header,
 .nav-link-color {
   display: inline-block;
   color: rgb(243, 239, 239);
-
   text-decoration: none;
 }
 
@@ -99,16 +112,100 @@ header,
   margin-left: 20px;
 }
 
+.scroll-box{
+  position: absolute;
+  z-index: 2;
+}
+
 .scroll-text{
-  margin-top: 35%;
-  margin-left: 41%;
   color: antiquewhite;
+  font-family: 'Cherry Swash';
 }
 
 .scroll-text-arrow{
-  margin-top: 1%;
-  margin-left: 47%;
   color: antiquewhite;
+}
+
+.box {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  min-height: 200px;
+  width: 30vw;
+  margin: 100px auto;
+  background: white;
+  border-radius: 5px;
+}
+
+.skills-overview{
+  text-align: center;
+  font-family: "Aclonica";
+  font-size: 270%;
+  font-weight: lighter;
+  color: black;
+  margin-top: 40px;
+}
+
+
+
+.container-1{
+  display: flex;
+  /* margin: 30px; */
+  margin-top: 10px;
+  border-radius: 25px;
+}
+
+.skills-head{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 150%;
+  font-weight: lighter;
+  color: black;
+}
+
+.box1{
+  flex: 1;
+}
+
+.box2{
+  flex: 1;
+}
+
+.box3{
+  flex: 1;
+}
+
+.db-icon{
+  color: rgba(48, 179, 91);
+  padding-left: 165px;
+  /* justify-content: center; */
+}
+
+.skills-list{
+  list-style-type:none;
+}
+
+.skills-list-p{
+  font-size: 130%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.li-skill{
+  display: flex;
+  align-items: baseline ;
+}
+
+.skills-icon{
+  color: rgba(48, 179, 91);
+}
+
+.container-1 div{
+  border: 1px black solid;
+  padding: 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -164,6 +261,7 @@ header,
     margin-top: 35%;
     margin-left: 26%;
     color: antiquewhite;
+    font-family: 'Cherry Swash';
   }
   
   .scroll-text-arrow{
