@@ -41,7 +41,7 @@ html {
   flex:1;
   display: flex;
   justify-content: center;
-  /* height: 0rem !important; */
+  transform: scale(1);
 }
 
 .nav-links-ul{
@@ -95,7 +95,6 @@ li, a{
 #check{
   display: none;
 }
-
 
 .nav-link-color {
   display: inline-block;
@@ -304,58 +303,78 @@ li, a{
   }
   
   .nav-container {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    flex-direction: column;
+    display: inline-block;
+    /* justify-content: space-between; */
+    /* box-sizing: border-box; */
+    /* flex-direction: column; */
     margin: 0;
     padding: 0;
-    /* width: 0rem;
-    height: 0rem; */
-    background-color: rgba(48, 179, 91, 0.64);
-    /* background-color: black; */
+    width: 100%;
+    background-color: transparent;
     align-items: baseline;
     top: 0;
-    z-index: 4;
-    position: relative;
+    z-index: 0;
+    position: absolute;
     /* transition: all 0.5s; */
   }
 
   .nav-box-1{
+    display: inline;
     flex: 1;
   }
   
   .nav-box-2{
-    flex:1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: block;
+    transition: all .5s;
+    margin-top: -100%;
+    height: 40%;
+    z-index: -1;
+    background-color: transparent;
   }
   
   .nav-links-ul{
-    margin-left: 30px;
-    display: flex;
+    margin-left: 0rem;
+    background-color: transparent;
+    z-index: 0;
+    /* display: flex; */
     /* flex-direction: column; */
   }
   
   .nav-links-ul div{
-    margin: 20%;
+    /* margin: 20%; */
   }
   
   
   .nav-links-ul li{
-    display: inline-block;
-    padding: 0px 20px;
+    /* display: inline-block; */
+    /* padding: 0px 20px; */
   }
 
 
   .nav-link-color {
-    display: inline-block;
+    display: block;
     /* color: rgb(243, 239, 239); */
     color: black;
     font-size: 80%;
+    margin-top: 1rem;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: none;
+    padding-top: 0.5rem;
+  }
+
+
+  .nav-link-color::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(235, 231, 231);
+    transition: all .2s;
+  }
+  
+  .nav-link-color:hover::after {
+    width: 100%;
+    transition: width .2s;
   }
 
   .blur-bg {
@@ -374,7 +393,7 @@ li, a{
   }
 
   .checkbtn {
-    padding-right: 0%;
+    padding-right: -1rem;
     display: block;
     position: relative;
   }
@@ -383,9 +402,13 @@ li, a{
     display: none;
   }
 
+  /* #check:checked .nav-box-2{
+    transform: scale(1);
+  } */
+
   .head-style{
-    margin-top: 10px;
-    z-index: 2;
+    margin-top: 0rem;
+    z-index: 0;
     position: absolute;
   }
 
@@ -397,7 +420,7 @@ li, a{
   }
 
   .cont-style{
-    margin-top: 10px;
+    margin-top: 0px;
     /* padding-top: 0%;
     padding-left: 5%;
     padding-right: 5%; */
